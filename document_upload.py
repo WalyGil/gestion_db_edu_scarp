@@ -3,6 +3,10 @@ import streamlit as st
 from knowledge_extractor import DocumentProcessor
 import os
 import tempfile
+import spacy
+
+# Cargar el modelo de spaCy
+nlp = spacy.load('es_core_news_md')
 
 def render_document_upload():
     st.header("📚 Gestión de Base de Conocimiento")
